@@ -36,66 +36,30 @@ class PreferencesTest {
         settingPreferences.ofInt("  ", 0)
     }
 
-//    @Test
-//    fun create_a_preference_of_int_type_with_default() {
-//        val pref = settingPreferences.ofInt(prefName, 0)
-//        assertEquals(pref.get(), 0)
-//    }
-
     @Test(expected = IllegalArgumentException::class)
     fun create_a_preference_of_long_type_with_blank_key() {
         settingPreferences.ofLong("  ", 0)
     }
-
-//    @Test
-//    fun create_a_preference_of_long_type_with_default() {
-//        val pref = settingPreferences.ofLong(prefName, -1)
-//        assertEquals(pref.get(), -1)
-//    }
 
     @Test(expected = IllegalArgumentException::class)
     fun create_a_preference_of_float_type_with_blank_key() {
         settingPreferences.ofLong("  ", 0)
     }
 
-//    @Test
-//    fun create_a_preference_of_float_type_with_default() {
-//        val pref = settingPreferences.ofFloat(prefName, 0.0f)
-//        assertEquals(pref.get(), 0.0f)
-//    }
-
     @Test(expected = IllegalArgumentException::class)
     fun create_a_preference_of_boolean_type_with_blank_key() {
         settingPreferences.ofBoolean("  ", false)
     }
-
-//    @Test
-//    fun create_a_preference_of_boolean_type_with_default() {
-//        val pref = settingPreferences.ofBoolean(prefName, false)
-//        assertEquals(pref.get(), false)
-//    }
 
     @Test(expected = IllegalArgumentException::class)
     fun create_a_preference_of_string_type_with_blank_key() {
         settingPreferences.ofString("  ", "default")
     }
 
-//    @Test
-//    fun create_a_preference_of_string_type_with_default() {
-//        val pref = settingPreferences.ofString(prefName, "default")
-//        assertEquals(pref.get(), "default")
-//    }
-
     @Test(expected = IllegalArgumentException::class)
     fun create_a_preference_of_string_set_with_blank_key() {
         settingPreferences.ofStringSet("  ", emptySet())
     }
-
-//    @Test
-//    fun create_a_preference_of_string_set_type_with_default() {
-//        val pref = settingPreferences.ofStringSet(prefName, emptySet())
-//        assertEquals(pref.get(), emptySet<String>())
-//    }
 
     @Test
     fun check_if_preferences_contains_a_key() {
